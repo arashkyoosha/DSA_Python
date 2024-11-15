@@ -22,3 +22,6 @@ verify(result)
 
 result = linear_search(numbers, 10)
 verify(result)
+
+result = linear_search(numbers, 1)
+verify(result)
