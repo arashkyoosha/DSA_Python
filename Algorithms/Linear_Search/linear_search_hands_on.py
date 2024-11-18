@@ -58,13 +58,12 @@ Write a function that takes a list of integers and returns the largest number in
 
 def find_largest(list):    
     largest = 0
-    for i in range(0, len(list)):            
-        if list[i] > largest:
+    for i in range(largest, len(list)): 
+        if largest < list[i]:
             largest = list[i]
-        return largest
-    
+    return largest   
 
-numbers = [1,3,6,8,77,4,66,23,12]
+numbers = [1,3,6,8,77,4,66,23,12,120,55,14]
 print(find_largest(numbers))
 
 
