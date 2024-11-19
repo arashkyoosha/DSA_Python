@@ -67,26 +67,6 @@ numbers = [1,3,6,8,77,4,66,23,12,120,55,14]
 print(find_largest(numbers))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 """
 
 Problem 4: Find Minimum in a Range
@@ -95,24 +75,16 @@ Write a function that takes a list of integers and two indices (start and end) a
 
 """
 
+def find_min_range(list, startIndex, endIndex):
+    smallest = list[startIndex]
+    for i in range(startIndex, endIndex):
+        if smallest > list[i]:
+            smallest = list[i]
+    return smallest       
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+numbers = [1,3,6,8,77,4,66,23,12,120,55,14]
+print(find_min_range(numbers, startIndex=6, endIndex=10))
 
 
 
