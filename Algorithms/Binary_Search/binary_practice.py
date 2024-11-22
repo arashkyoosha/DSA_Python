@@ -57,12 +57,9 @@ print("First occurrence found at index: ", first_occurrence(arr, target))
 
 
 """
-Find the Last Occurrence of an Element
+3. Find the Last Occurrence of an Element
 
 Description: Given a sorted array, find the index of the last occurrence of a target element using binary search. If the target is not found, return None.
-
-Input: [1, 2, 3, 3, 3, 4, 5, 7], target = 3
-Output: 4 (index of the last occurrence of 3)
 """
 
 def find_last_occurrence(arr, target):
@@ -86,3 +83,5 @@ def find_last_occurrence(arr, target):
 numbers = [1, 2, 3, 3, 3, 4, 5, 7]
 target = 3
 print("Last occurrence found at index: ", find_last_occurrence(numbers, target))
+
+
