@@ -30,3 +30,24 @@ verify(result)
 result = binary_search(numbers, 10)
 verify(result)
 
+
+
+# def find_index(arr, target):
+#     left = 0
+#     right = len(arr) - 1
+
+#     while left <= right:
+#         mid = (left + right) // 2
+
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] < target:
+#             left = mid + 1 
+#         else:
+#             right = mid - 1
+
+#     return None
+
+# nums = [1,3,5,7,8,15,55,87,120,137]
+# target = 137
+# print("Target found at index: ", find_index(nums, target))

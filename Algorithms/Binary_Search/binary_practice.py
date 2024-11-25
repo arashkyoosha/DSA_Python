@@ -85,3 +85,58 @@ target = 3
 print("Last occurrence found at index: ", find_last_occurrence(numbers, target))
 
 
+"""
+4. Count Occurrences of a Target
+
+Count how many times a target appears in a sorted array.
+"""
+def count_occurrences(arr, target):
+    def find_first_occurrence(arr, target):
+        left, right = 0, len(arr) - 1
+        result = -1
+
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if arr[mid] == target:
+                result = mid
+                right = mid - 1  # Keep searching in the left half
+            elif arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return result
+
+    def find_last_occurrence(arr, target):
+        left, right = 0, len(arr) - 1
+        result = -1
+
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if arr[mid] == target:
+                result = mid
+                left = mid + 1  # Keep searching in the right half
+            elif arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return result
+
+    # Find the first and last occurrences of the target
+    first = find_first_occurrence(arr, target)
+    last = find_last_occurrence(arr, target)
+
+    # If the target is not found, return 0
+    if first == -1 or last == -1:
+        return 0
+
+    # Count of target = last index - first index + 1
+    return last - first + 1
+
+# Example Usage
+arr = [1, 2, 2, 2, 2, 2, 3, 4, 5]
+target = 2
+print("Target count found in the list: ", count_occurrences(arr, target))  # Output: 5
