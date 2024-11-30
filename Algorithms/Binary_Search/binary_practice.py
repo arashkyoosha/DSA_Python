@@ -140,3 +140,28 @@ def count_occurrences(arr, target):
 arr = [1, 2, 2, 2, 2, 2, 3, 4, 5]
 target = 2
 print("Target count found in the list: ", count_occurrences(arr, target))  # Output: 5
+
+
+"""
+10. Find Missing Element
+
+Given a sorted array of consecutive integers (with no duplicates) and one missing integer, find the missing number.
+
+arr = [1, 2, 3, 4, 6, 7, 8]
+# Output: 5
+
+"""
+
+def find_missing_value(list):
+    left = 0 
+    right = len(list) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        print(arr[mid], "at index ", mid)
+        return
+
+
+arr = [1, 2, 3, 4, 6, 7, 8]
+find_missing_value(arr)
