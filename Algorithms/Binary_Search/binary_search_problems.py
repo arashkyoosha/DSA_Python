@@ -148,16 +148,16 @@ Output: 0
 
 """
 
-def find_minimum(arr):
-    left = 0
-    right = len(arr) - 1 
+# def find_minimum(arr):
+#     left = 0
+#     right = len(arr) - 1 
 
-    while left <= right:
-        mid = (left + right) // 2
+#     while left <= right:
+#         mid = (left + right) // 2
 
-        if arr[mid] < arr[mid + 1]:
+#         if arr[mid] < arr[mid + 1]:
 
     
 
-nums = [4, 5, 6, 7, 0, 1, 2]    
-find_minimum(nums)
+# nums = [4, 5, 6, 7, 0, 1, 2]    
+# find_minimum(nums)
